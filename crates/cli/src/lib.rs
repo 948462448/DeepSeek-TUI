@@ -135,7 +135,7 @@ enum Commands {
     Run(RunArgs),
     /// Run CodeWhale diagnostics.
     Doctor(TuiPassthroughArgs),
-    /// List live DeepSeek API models via the TUI binary.
+    /// List live provider API models via the TUI binary.
     Models(TuiPassthroughArgs),
     /// Generate speech audio with Xiaomi MiMo TTS models via the TUI binary.
     #[command(visible_alias = "tts")]
@@ -918,7 +918,7 @@ fn auth_status_all_providers(store: &ConfigStore, secrets: &Secrets) -> Vec<Stri
         "{:<14} {:<8} {:<10} {:<8} {}",
         "provider", "config", "keyring", "env", "status"
     ));
-    lines.push(format!("{}", "-".repeat(70)));
+    lines.push("-".repeat(70));
 
     for provider in PROVIDER_LIST {
         let config_key = provider_config_api_key(store, provider);

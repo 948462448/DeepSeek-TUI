@@ -1,4 +1,4 @@
-//! CLI entry point for the `DeepSeek` client.
+//! CLI entry point for CodeWhale.
 
 use std::io::{self, IsTerminal, Read, Write};
 use std::path::{Path, PathBuf};
@@ -115,8 +115,8 @@ fn configure_windows_console_utf8() {}
     bin_name = "codewhale-tui",
     author,
     version = env!("DEEPSEEK_BUILD_VERSION"),
-    about = "codewhale/CLI for DeepSeek models",
-    long_about = "Terminal-native TUI and CLI for DeepSeek models.\n\nRun 'codewhale' to start.\n\nNot affiliated with DeepSeek Inc."
+    about = "CodeWhale terminal coding agent",
+    long_about = "Terminal-native TUI and CLI for open-source and open-weight coding models.\n\nRun 'codewhale' to start.\n\nProvider routes include DeepSeek, Arcee, Hugging Face, OpenRouter, Xiaomi MiMo, local vLLM/SGLang/Ollama, and more."
 )]
 struct Cli {
     /// Subcommand to run
@@ -214,7 +214,7 @@ enum Commands {
     },
     /// Create default AGENTS.md in current directory
     Init,
-    /// Save a DeepSeek API key to the shared user config
+    /// Save an API key to the shared user config
     Login {
         /// API key to store (otherwise read from stdin)
         #[arg(long)]

@@ -25,6 +25,13 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - **Provider description.** `/provider` command description is now neutral
   instead of recommending specific providers.
 
+### Community
+
+Thanks to **@xyuai** for provider persistence, `/logout` scope clarification,
+provider picker key replacement, and MiMo auth cleanup work (#2714, #2715,
+#2717, #2718), and **@RefuseOdd** for configurable `path_suffix` support on
+OpenAI-compatible endpoints (#2558).
+
 ## [0.8.52] - 2026-06-03
 
 ### Added
@@ -5404,7 +5411,8 @@ Welcome — and thank you.
 - Hooks system and config profiles
 - Example skills and launch assets
 
-[Unreleased]: https://github.com/Hmbown/CodeWhale/compare/v0.8.52...HEAD
+[Unreleased]: https://github.com/Hmbown/CodeWhale/compare/v0.8.53...HEAD
+[0.8.53]: https://github.com/Hmbown/CodeWhale/compare/v0.8.52...v0.8.53
 [0.8.52]: https://github.com/Hmbown/CodeWhale/compare/v0.8.51...v0.8.52
 [0.8.51]: https://github.com/Hmbown/CodeWhale/compare/v0.8.50...v0.8.51
 [0.8.50]: https://github.com/Hmbown/CodeWhale/compare/v0.8.49...v0.8.50

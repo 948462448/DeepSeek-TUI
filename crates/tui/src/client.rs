@@ -428,14 +428,12 @@ pub(super) fn api_url_with_suffix(base_url: &str, path: &str, path_suffix: Optio
     if path.starts_with("beta/") {
         return format!("{}/{}", unversioned_base_url(base_url), path);
     }
-    if path == "chat/completions" {
-        if let Some(suffix) = path_suffix {
-            return format!(
-                "{}/{}",
-                unversioned_base_url(base_url),
-                suffix.trim_start_matches('/')
-            );
-        }
+    if let ("chat/completions", Some(suffix)) = (path, path_suffix) {
+        return format!(
+            "{}/{}",
+            unversioned_base_url(base_url),
+            suffix.trim_start_matches('/')
+        );
     }
     let mut versioned = versioned_base_url(base_url);
     // The /beta suffix is not a real API version — it is an
